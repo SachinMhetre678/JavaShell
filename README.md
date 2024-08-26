@@ -1,36 +1,88 @@
-[![progress-banner](https://backend.codecrafters.io/progress/shell/a80d56d7-75fa-41bb-852e-7c5383fcaf96)](https://app.codecrafters.io/users/codecrafters-bot?r=2qF)
+# JavaShell
 
-This is a starting point for Java solutions to the
-["Build Your Own Shell" Challenge](https://app.codecrafters.io/courses/shell/overview).
+Welcome to **JavaShell**, a simple shell implementation in Java! This project aims to replicate basic functionalities of a Unix-like shell, including built-in commands like `cd`, `pwd`, `echo`, and `exit`. The shell supports handling absolute paths, relative paths, and the `~` character for the home directory.
 
-In this challenge, you'll build your own POSIX compliant shell that's capable of
-interpreting shell commands, running external programs and builtin commands like
-cd, pwd, echo and more. Along the way, you'll learn about shell command parsing,
-REPLs, builtin commands, and more.
+## Features
 
-**Note**: If you're viewing this repo on GitHub, head over to
-[codecrafters.io](https://codecrafters.io) to try the challenge.
+- **Basic Shell Commands**:
+  - `pwd`: Print the current working directory.
+  - `echo`: Print text to the terminal.
+  - `type`: Check if a command is a shell builtin.
+  - `exit`: Exit the shell with a specified exit code.
+  
+- **Directory Navigation**:
+  - `cd /absolute/path`: Change to an absolute path.
+  - `cd ../`: Move to the parent directory.
+  - `cd ./relative/path`: Navigate using a relative path.
+  - `cd ~`: Navigate to the user's home directory.
 
-# Passing the first stage
+## Getting Started
 
-The entry point for your `shell` implementation is in `src/main/java/Main.java`.
-Study and uncomment the relevant code, and push your changes to pass the first
-stage:
+### Prerequisites
+
+To run JavaShell, you'll need:
+
+- **Java Development Kit (JDK) 8 or later**
+
+### Installation
+
+1. **Clone the repository**:
+
+   ```sh
+   git clone https://github.com/YourUsername/JavaShell.git
+   cd JavaShell
+   ```
+
+2. **Compile the program**:
+
+   ```sh
+   javac Main.java
+   ```
+
+3. **Run the shell**:
+
+   ```sh
+   java Main
+   ```
+
+### Usage
+
+Once the shell is running, you can use it like any basic command-line interface:
 
 ```sh
-git add .
-git commit -m "pass 1st stage" # any msg
-git push origin master
+$ pwd
+/home/user
+
+$ echo "Welcome to JavaShell!"
+Welcome to JavaShell!
+
+$ cd /usr/local
+$ pwd
+/usr/local
+
+$ type pwd
+pwd is a shell builtin
+
+$ exit 0
 ```
 
-Time to move on to the next stage!
+## Contributing
 
-# Stage 2 & beyond
+Contributions are welcome! Feel free to fork the repository, create a new branch, and submit a pull request with your improvements.
 
-Note: This section is for stages 2 and beyond.
+1. **Fork the project**.
+2. **Create your feature branch** (`git checkout -b feature/AmazingFeature`).
+3. **Commit your changes** (`git commit -m 'Add some AmazingFeature'`).
+4. **Push to the branch** (`git push origin feature/AmazingFeature`).
+5. **Open a pull request**.
 
-1. Ensure you have `java (21)` installed locally
-1. Run `./your_program.sh` to run your program, which is implemented in
-   `src/main/java/Main.java`.
-1. Commit your changes and run `git push origin master` to submit your solution
-   to CodeCrafters. Test output will be streamed to your terminal.
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgements
+
+- Thanks to CodeSmith for the project idea.
+- Inspired by Unix/Linux shell functionalities.
+
+---
